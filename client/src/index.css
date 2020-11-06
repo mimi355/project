@@ -1,0 +1,279 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #214252;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: #214252;
+  color: white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #16697a;
+}
+header a {
+  color: white;
+  padding: 1rem;
+}
+a.title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.row.center {
+  justify-content: center;
+  text-align: center;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+img.photo {
+  max-width: 29rem;
+  width: 100%;
+}
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+.rating span {
+  color: gold;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+img.big {
+  width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem #214252 solid;
+}
+button {
+  color: #214252;
+  cursor: pointer;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border: 0.1rem grey solid;
+}
+button:hover {
+  background-color: #16697a;
+  color: white;
+}
+.stock {
+  color: #214252;
+}
+
+.basket {
+  background-color: #16697a;
+  border-radius: 50%;
+  color: floralwhite;
+  padding: 0.1rem 0.6rem;
+  font-size: 1.3;
+  margin-left: 0.3rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #16697a;
+}
+
+li {
+  list-style: none;
+}
+.fab {
+  display: flex;
+  list-style: none;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  margin: 20px 0 0;
+  font-size: 4em;
+  font-weight: 200;
+  z-index: 1;
+  overflow: hidden;
+  background-color: white;
+}
+
+.animation:before {
+  content: "";
+  position: absolute;
+  left: 110;
+  width: 120%;
+  height: 50%;
+  background: linear-gradient(90deg, transparent 0%, white 5%white 100%);
+  animation: animate 5.5s linear forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes animate {
+  0% {
+    left: 110%;
+  }
+
+  100% {
+    left: -20%;
+  }
+}
+
+.animation {
+  color: #1f6f8b;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto;
+}
+.container > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.container label {
+  margin: 1rem 0;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #214252;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.checkout-steps > div {
+  border-top: 0.3rem grey solid;
+  color: grey;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: blue;
+  color: blue;
+}
+
+button.small{
+  font-size:1.2rem;
+}
+
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}
